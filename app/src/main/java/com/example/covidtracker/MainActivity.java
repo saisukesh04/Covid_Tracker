@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences.Editor modeEdit;
     private boolean nightMode;
 
-    public static final String baseURL = "https://api.thevirustracker.com/";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

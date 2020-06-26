@@ -1,4 +1,4 @@
-package com.example.covidtracker;
+package com.example.covidtracker.classes;
 
 public class Count {
 

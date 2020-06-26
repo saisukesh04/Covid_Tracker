@@ -1,6 +1,5 @@
 package com.example.covidtracker.fragments;
 
-import android.graphics.Movie;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,12 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.covidtracker.Count;
+import com.example.covidtracker.classes.Count;
 import com.example.covidtracker.R;
-import com.example.covidtracker.Results;
+import com.example.covidtracker.classes.Results;
 import com.example.covidtracker.data.RetrofitObjectAPI;
 
-import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,9 +22,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.covidtracker.MainActivity.baseURL;
-
 public class IndiaFragment extends Fragment {
+
+    public final String baseURL = "https://api.thevirustracker.com/";
 
     public IndiaFragment() {
         // Required empty public constructor

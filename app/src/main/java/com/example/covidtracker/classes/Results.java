@@ -1,4 +1,6 @@
-package com.example.covidtracker;
+package com.example.covidtracker.classes;
+
+import com.example.covidtracker.classes.Count;
 
 import java.util.List;
 
