@@ -1,15 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.IndiaFragment">
+    android:orientation="vertical"
+    android:layout_margin="5dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/plain_background"
-        android:text="hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/World_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/world"
+            android:textColor="@color/main_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/world_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/total"
+            android:textColor="@color/Green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/world_recovered_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/World_text" />
+
+        <TextView
+            android:id="@+id/world_recovered_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/recovered"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/world_death_text"
+            app:layout_constraintStart_toEndOf="@+id/world_total_text"
+            app:layout_constraintTop_toBottomOf="@id/World_text" />
+
+        <TextView
+            android:id="@+id/world_death_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/deaths"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/world_recovered_text"
+            app:layout_constraintTop_toBottomOf="@id/World_text" />
+
+        <TextView
+            android:id="@+id/world_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/Green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/world_recovered_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/world_total_text" />
+
+        <TextView
+            android:id="@+id/world_recovered_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/world_death_count"
+            app:layout_constraintStart_toEndOf="@+id/world_total_count"
+            app:layout_constraintTop_toBottomOf="@id/world_recovered_text" />
+
+        <TextView
+            android:id="@+id/world_death_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/world_recovered_count"
+            app:layout_constraintTop_toBottomOf="@id/world_death_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/India_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/india"
+            android:textColor="@color/main_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/india_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/total"
+            android:textColor="@color/Green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/india_recovered_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/India_text" />
+
+        <TextView
+            android:id="@+id/india_recovered_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/recovered"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/india_death_text"
+            app:layout_constraintStart_toEndOf="@+id/india_total_text"
+            app:layout_constraintTop_toBottomOf="@id/India_text" />
+
+        <TextView
+            android:id="@+id/india_death_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/deaths"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/india_recovered_text"
+            app:layout_constraintTop_toBottomOf="@id/India_text" />
+
+        <TextView
+            android:id="@+id/india_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/Green"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/india_recovered_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/india_total_text" />
+
+        <TextView
+            android:id="@+id/india_recovered_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/india_death_count"
+            app:layout_constraintStart_toEndOf="@+id/india_total_count"
+            app:layout_constraintTop_toBottomOf="@id/india_recovered_text" />
+
+        <TextView
+            android:id="@+id/india_death_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/default_count"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/india_recovered_count"
+            app:layout_constraintTop_toBottomOf="@id/india_death_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
