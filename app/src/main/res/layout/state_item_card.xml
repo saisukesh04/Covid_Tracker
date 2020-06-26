@@ -2,49 +2,64 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/state_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/state"
+            android:textColor="@color/main_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/total_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/total"
-            android:textColor="@color/main_text"
+            android:textColor="@color/Green"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/recovered_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/recovered_text"/>
+            app:layout_constraintTop_toBottomOf="@id/state_name_text" />
 
         <TextView
             android:id="@+id/recovered_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/recovered"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/death_text"
             app:layout_constraintStart_toEndOf="@+id/total_text"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/state_name_text" />
 
         <TextView
             android:id="@+id/death_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/deaths"
             android:textColor="@color/Red"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/recovered_text" />
+            app:layout_constraintStart_toEndOf="@+id/recovered_text"
+            app:layout_constraintTop_toBottomOf="@id/state_name_text" />
 
         <TextView
             android:id="@+id/total_count"
@@ -52,11 +67,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="0"
-            android:textColor="@color/main_text"
+            android:textColor="@color/Green"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/recovered_count"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/total_text"
-            app:layout_constraintEnd_toStartOf="@+id/recovered_count"/>
+            app:layout_constraintTop_toBottomOf="@id/total_text" />
 
         <TextView
             android:id="@+id/recovered_count"
@@ -79,8 +94,8 @@
             android:textColor="@color/Red"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/death_text"
-            app:layout_constraintStart_toEndOf="@+id/recovered_count"/>
+            app:layout_constraintStart_toEndOf="@+id/recovered_count"
+            app:layout_constraintTop_toBottomOf="@id/death_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

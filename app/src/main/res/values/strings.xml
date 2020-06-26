@@ -6,4 +6,5 @@
     <string name="deaths">Deaths</string>
     <string name="recovered">Recovered</string>
     <string name="total">Total</string>
+    <string name="state">State</string>
 </resources>

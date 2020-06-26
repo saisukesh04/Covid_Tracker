@@ -5,11 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".fragments.StatesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/state_stats_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/plain_background"
-        android:text="hello_blank_fragment" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

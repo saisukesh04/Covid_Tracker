@@ -6,6 +6,7 @@
 
     <color name="White">#FFFFFF</color>
     <color name="Red">#FF0000</color>
+    <color name="Green">#00BA00</color>
 
 <!--    For dark mode-->
     <color name="plain_background">#FFFFFF</color>
