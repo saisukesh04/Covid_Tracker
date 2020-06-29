@@ -37,7 +37,7 @@ public class IndiaFragment extends Fragment {
     @BindView(R.id.india_recovered_count) TextView india_recovered_count;
     @BindView(R.id.india_death_count) TextView india_death_count;
 
-    public final String baseURL = "https://api.thevirustracker.com/";
+    public final static String baseURL = "https://api.thevirustracker.com/";
 
     public IndiaFragment() {
         // Required empty public constructor
