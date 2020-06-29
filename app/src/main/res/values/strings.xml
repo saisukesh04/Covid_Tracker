@@ -10,4 +10,5 @@
     <string name="world">World</string>
     <string name="default_count">0</string>
     <string name="india">India</string>
+    <string name="active">Active</string>
 </resources>

@@ -36,8 +36,13 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesAdapter.ViewHolder
         Statewise statewise = stateData.get(position);
         holder.state_name_text.setText(statewise.getState());
         holder.total_count.setText(statewise.getConfirmed());
+        holder.active_count.setText(statewise.getActive());
         holder.recovered_count.setText(statewise.getRecovered());
         holder.death_count.setText(statewise.getDeaths());
+        holder.increase_total_count.setText(statewise.getDeltaconfirmed());
+        holder.increase_active_count.setText(statewise.getDeltaconfirmed());
+        holder.increase_recovered_count.setText(statewise.getDeltarecovered());
+        holder.increase_death_count.setText(statewise.getDeltadeaths());
     }
 
     @Override
@@ -47,14 +52,20 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView total_count, recovered_count, death_count, state_name_text;
+        TextView total_count, active_count, recovered_count, death_count, state_name_text;
+        TextView increase_total_count, increase_active_count, increase_recovered_count, increase_death_count;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             state_name_text = itemView.findViewById(R.id.state_name_text);
             total_count = itemView.findViewById(R.id.total_count);
+            active_count = itemView.findViewById(R.id.active_count);
             recovered_count = itemView.findViewById(R.id.recovered_count);
             death_count = itemView.findViewById(R.id.death_count);
+            increase_total_count = itemView.findViewById(R.id.increase_total_count);
+            increase_active_count = itemView.findViewById(R.id.increase_active_count);
+            increase_recovered_count = itemView.findViewById(R.id.increase_recovered_count);
+            increase_death_count = itemView.findViewById(R.id.increase_death_count);
         }
     }
 }

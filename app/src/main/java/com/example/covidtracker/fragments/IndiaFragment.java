@@ -29,9 +29,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class IndiaFragment extends Fragment {
 
     @BindView(R.id.world_total_count) TextView world_total_count;
+    @BindView(R.id.world_active_count) TextView world_active_count;
     @BindView(R.id.world_recovered_count) TextView world_recovered_count;
     @BindView(R.id.world_death_count) TextView world_death_count;
     @BindView(R.id.india_total_count) TextView india_total_count;
+    @BindView(R.id.india_active_count) TextView india_active_count;
     @BindView(R.id.india_recovered_count) TextView india_recovered_count;
     @BindView(R.id.india_death_count) TextView india_death_count;
 
@@ -66,6 +68,7 @@ public class IndiaFragment extends Fragment {
                 assert response.body() != null;
                 List<Count> worldStats = response.body().getResults();
                 world_total_count.setText(worldStats.get(0).getTotal_cases());
+                world_active_count.setText(worldStats.get(0).getTotal_unresolved());
                 world_recovered_count.setText(worldStats.get(0).getTotal_recovered());
                 world_death_count.setText(worldStats.get(0).getTotal_deaths());
             }
@@ -82,6 +85,10 @@ public class IndiaFragment extends Fragment {
                 assert response.body() != null;
                 List<Count> indiaStats = response.body().getCountrydata();
                 india_total_count.setText(indiaStats.get(0).getTotal_cases());
+                if(indiaStats.get(0).getTotal_unresolved().equals("0"))
+                    india_active_count.setText("-");
+                else
+                    india_active_count.setText(indiaStats.get(0).getTotal_unresolved());
                 india_recovered_count.setText(indiaStats.get(0).getTotal_recovered());
                 india_death_count.setText(indiaStats.get(0).getTotal_deaths());
             }
