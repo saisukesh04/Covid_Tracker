@@ -1,7 +1,6 @@
 package com.example.covidtracker;
 
 import android.app.AlarmManager;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.NotificationCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,9 +23,6 @@ import android.widget.Toast;
 
 import com.example.covidtracker.notifications.AlertReceiver;
 import com.example.covidtracker.ui.main.SectionsPagerAdapter;
-
-import java.util.Calendar;
-import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -113,6 +108,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AlertReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 120000, pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 3600000, pendingIntent);
     }
 }
