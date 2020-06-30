@@ -7,8 +7,8 @@
     <string name="recovered">Recovered</string>
     <string name="total">Total</string>
     <string name="state">State</string>
-    <string name="world">World</string>
+    <string name="world">World \  </string>
     <string name="default_count">0</string>
-    <string name="india">India</string>
+    <string name="india">India \  </string>
     <string name="active">Active</string>
 </resources>
