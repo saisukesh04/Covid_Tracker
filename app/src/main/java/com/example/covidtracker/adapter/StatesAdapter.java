@@ -40,7 +40,6 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesAdapter.ViewHolder
         holder.recovered_count.setText(statewise.getRecovered());
         holder.death_count.setText(statewise.getDeaths());
         holder.increase_total_count.setText(statewise.getDeltaconfirmed());
-        holder.increase_active_count.setText(statewise.getDeltaconfirmed());
         holder.increase_recovered_count.setText(statewise.getDeltarecovered());
         holder.increase_death_count.setText(statewise.getDeltadeaths());
     }
@@ -53,7 +52,7 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView total_count, active_count, recovered_count, death_count, state_name_text;
-        TextView increase_total_count, increase_active_count, increase_recovered_count, increase_death_count;
+        TextView increase_total_count, increase_recovered_count, increase_death_count;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,7 +62,6 @@ public class StatesAdapter extends RecyclerView.Adapter<StatesAdapter.ViewHolder
             recovered_count = itemView.findViewById(R.id.recovered_count);
             death_count = itemView.findViewById(R.id.death_count);
             increase_total_count = itemView.findViewById(R.id.increase_total_count);
-            increase_active_count = itemView.findViewById(R.id.increase_active_count);
             increase_recovered_count = itemView.findViewById(R.id.increase_recovered_count);
             increase_death_count = itemView.findViewById(R.id.increase_death_count);
         }

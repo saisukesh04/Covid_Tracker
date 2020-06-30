@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
-        android:layout_marginTop="16dp" >
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,6 +50,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/total"
                     android:textColor="@color/Blue"
                     android:textStyle="bold"
@@ -63,6 +67,15 @@
                     android:textStyle="bold"
                     android:layout_gravity="center" />
 
+                <TextView
+                    android:id="@+id/increase_world_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_increase_blue"
+                    android:text="@string/default_count"
+                    android:textColor="@color/Blue"
+                    android:layout_gravity="end|bottom"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -76,10 +89,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/world_text">
 
                 <TextView
-                    android:id="@+id/world__active_text"
+                    android:id="@+id/world_active_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/active"
                     android:textColor="@color/Green"
                     android:textStyle="bold"
@@ -112,6 +127,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
                     android:text="@string/recovered"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
@@ -144,6 +161,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/deaths"
                     android:textColor="@color/Red"
                     android:textStyle="bold"
@@ -160,6 +179,15 @@
                     android:textStyle="bold"
                     android:layout_gravity="center" />
 
+                <TextView
+                    android:id="@+id/increase_world_death_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_increase_red"
+                    android:text="@string/default_count"
+                    android:textColor="@color/Red"
+                    android:layout_gravity="end|bottom"/>
+
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -169,7 +197,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -204,21 +234,32 @@
                     android:id="@+id/india_total_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/total"
                     android:textColor="@color/Blue"
-                    android:textStyle="bold"
-                    android:layout_gravity="center" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/india_total_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     android:text="@string/default_count"
                     android:textColor="@color/Blue"
-                    android:textStyle="bold"
-                    android:layout_gravity="center" />
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/increase_india_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:drawableStart="@drawable/ic_increase_blue"
+                    android:text="@string/default_count"
+                    android:textColor="@color/Blue" />
 
             </LinearLayout>
 
@@ -237,6 +278,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/active"
                     android:textColor="@color/Green"
                     android:textStyle="bold"
@@ -269,6 +312,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
                     android:text="@string/recovered"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold"
@@ -301,11 +346,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/deaths"
                     android:textColor="@color/Red"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
-
 
                 <TextView
                     android:id="@+id/india_death_count"
@@ -316,6 +362,15 @@
                     android:textColor="@color/Red"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/increase_india_death_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_increase_red"
+                    android:text="@string/default_count"
+                    android:textColor="@color/Red"
+                    android:layout_gravity="end|bottom"/>
 
             </LinearLayout>
 

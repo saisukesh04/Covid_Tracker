@@ -32,10 +32,14 @@ public class IndiaFragment extends Fragment {
     @BindView(R.id.world_active_count) TextView world_active_count;
     @BindView(R.id.world_recovered_count) TextView world_recovered_count;
     @BindView(R.id.world_death_count) TextView world_death_count;
+    @BindView(R.id.increase_world_total_count) TextView increase_world_total_count;
+    @BindView(R.id.increase_world_death_count) TextView increase_world_death_count;
     @BindView(R.id.india_total_count) TextView india_total_count;
     @BindView(R.id.india_active_count) TextView india_active_count;
     @BindView(R.id.india_recovered_count) TextView india_recovered_count;
     @BindView(R.id.india_death_count) TextView india_death_count;
+    @BindView(R.id.increase_india_total_count) TextView increase_india_total_count;
+    @BindView(R.id.increase_india_death_count) TextView increase_india_death_count;
 
     public final static String baseURL = "https://api.thevirustracker.com/";
 
@@ -71,6 +75,8 @@ public class IndiaFragment extends Fragment {
                 world_active_count.setText(worldStats.get(0).getTotal_unresolved());
                 world_recovered_count.setText(worldStats.get(0).getTotal_recovered());
                 world_death_count.setText(worldStats.get(0).getTotal_deaths());
+                increase_world_total_count.setText(worldStats.get(0).getTotal_new_cases_today());
+                increase_world_death_count.setText(worldStats.get(0).getTotal_new_deaths_today());
             }
 
             @Override
@@ -91,6 +97,8 @@ public class IndiaFragment extends Fragment {
                     india_active_count.setText(indiaStats.get(0).getTotal_unresolved());
                 india_recovered_count.setText(indiaStats.get(0).getTotal_recovered());
                 india_death_count.setText(indiaStats.get(0).getTotal_deaths());
+                increase_india_total_count.setText(indiaStats.get(0).getTotal_new_cases_today());
+                increase_india_death_count.setText(indiaStats.get(0).getTotal_new_deaths_today());
             }
 
             @Override

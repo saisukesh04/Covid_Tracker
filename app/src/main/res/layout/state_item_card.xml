@@ -99,15 +99,6 @@
                 android:textStyle="bold"
                 android:layout_gravity="center" />
 
-            <TextView
-                android:id="@+id/increase_active_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_increase_green"
-                android:text="@string/default_count"
-                android:textColor="@color/Green"
-                android:layout_gravity="end|bottom"/>
-
         </LinearLayout>
 
         <LinearLayout
