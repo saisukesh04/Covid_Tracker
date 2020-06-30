@@ -11,4 +11,5 @@
     <string name="default_count">0</string>
     <string name="india">India \  </string>
     <string name="active">Active</string>
+    <string name="swipe_instruction">Swipe for State-wise Data -> \ </string>
 </resources>

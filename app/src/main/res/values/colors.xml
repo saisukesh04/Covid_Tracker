@@ -12,4 +12,5 @@
 <!--    For dark mode-->
     <color name="plain_background">#FFFFFF</color>
     <color name="main_text">#000000</color>
+    <color name="dark_back">#FFFFFF</color>
 </resources>

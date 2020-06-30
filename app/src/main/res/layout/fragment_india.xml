@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:background="@color/dark_back">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -14,12 +15,14 @@
         android:paddingBottom="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp" >
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" >
+            android:paddingBottom="8dp"
+            android:background="@color/plain_background" >
 
             <TextView
                 android:id="@+id/world_text"
@@ -204,7 +207,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp">
+            android:paddingBottom="8dp"
+            android:background="@color/plain_background" >
 
             <TextView
                 android:id="@+id/india_text"
@@ -377,5 +381,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:gravity="end"
+        android:text="@string/swipe_instruction"
+        android:textColor="@color/main_text" />
 
 </LinearLayout>

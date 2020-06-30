@@ -7,6 +7,7 @@
     <color name="White">#FFFFFF</color>
 
     <!--    For dark mode-->
-    <color name="plain_background">#313131</color>
+    <color name="plain_background">#CC313131</color>
     <color name="main_text">#FFFFFF</color>
+    <color name="dark_back">#FF313131</color>
 </resources>
